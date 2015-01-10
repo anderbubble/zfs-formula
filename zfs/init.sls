@@ -2,7 +2,7 @@
 {% if grains['os_family'] == 'RedHat' %}
 
 include:
-  - epel-formula
+  - epel
 
 {% if grains['osmajorrelease'][0] == '6' %}
   {% set pkg = {
