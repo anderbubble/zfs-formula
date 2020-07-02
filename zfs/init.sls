@@ -4,11 +4,11 @@
 include:
   - epel
 
-{% if grains['osmajorrelease'][0] == '6' %}
+{% if grains['osmajorrelease'] == '6' %}
   {% set pkg = {
     'rpm': 'http://archive.zfsonlinux.org/epel/zfs-release.el6.noarch.rpm',
   } %}
-{% elif grains['osmajorrelease'][0] == '7' %}
+{% elif grains['osmajorrelease'] == '7' %}
   {% set pkg = {
     'rpm': 'http://archive.zfsonlinux.org/epel/zfs-release.el7.noarch.rpm',
   } %}
